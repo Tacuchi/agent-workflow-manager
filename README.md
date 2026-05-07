@@ -1,5 +1,20 @@
 # agent-workflow-manager
 
+> 🚫 **ARCHIVED — Decommissioned 2026-05-06** (RFC 002 Fase E, session008-dev en `qtc-plugin-v2`).
+>
+> Este repo ya **no recibe cambios funcionales**. Quedó superseded por:
+> **[`@tacuchi/agent-workflow@^2`](https://www.npmjs.com/package/@tacuchi/agent-workflow)** — el skill ahora viene **bundled** en el tarball npm (Fase D, session007, commit `agent-workflow@72facef`). `agent-workflow self install-skill` lo instala desde el bundled location por default; no requiere clonar este repo.
+>
+> **¿Qué hacer?**
+> - **Instalaciones existentes** (skill clonado en `~/.claude/skills/agent-workflow-manager/`): siguen funcionando. Cuando actualices al CLI v2.0.0+, el skill bundled tiene la misma API.
+> - **Nuevas instalaciones**: ejecutar `agent-workflow self install-skill` post-`npm install -g @tacuchi/agent-workflow@^2`. El bundled se copia desde `node_modules/@tacuchi/agent-workflow/skills/agent-workflow-manager/`.
+> - **Bleeding-edge**: `agent-workflow self install-skill --from https://github.com/Tacuchi/agent-workflow-manager.git` (override explícito) — pero este repo ya no se actualizará, por lo que el bundled es siempre la versión canónica.
+> - **Issues / PRs**: redirigir al repo del CLI [`agent-workflow`](https://github.com/Tacuchi/agent-workflow).
+>
+> Refs: [RFC 002 — consolidar arquitectura qtc-*](../qtc-plugin-v2/docs/rfcs/002-consolidar-arquitectura-qtc.md) · [CHANGELOG `agent-workflow@2.0.0`](../agent-workflow/CHANGELOG.md).
+
+---
+
 Universal Claude Code / Codex skill for the [`@tacuchi/agent-workflow`](https://www.npmjs.com/package/@tacuchi/agent-workflow) CLI.
 
 This repo packages a single SKILL — `SKILL.md` plus a `references/` folder — that teaches an AI agent how to drive the agent-workflow session-lifecycle CLI: create / resume / close sessions, read & write artifacts (`OBJETIVO.md`, `TASKS.md`, `DECISIONES.md`, `HISTORY.md`, `CHECKPOINT.md`), inspect sources, run hooks, and manage the binary itself.
